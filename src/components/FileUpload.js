@@ -46,7 +46,7 @@ const FileUpload = ({ onTranscriptUpload, transcript, onSummaryGenerated, loadin
 
         setLoading(true);
         try {
-            const response = await axios.post('/api/summarize', {
+            const response = await axios.post('https://ai-summarizer-backend-dpqz.onrender.com/api/summarize', {
                 transcript,
                 customPrompt: customPrompt.trim() || undefined
             });
