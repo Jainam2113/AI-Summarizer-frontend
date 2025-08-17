@@ -17,7 +17,7 @@ const EmailSharer = ({ summary }) => {
 
         setSending(true);
         try {
-            await axios.post('/api/email', {
+           await axios.post('https://ai-summarizer-backend-dpqz.onrender.com/api/email', {
                 recipients: emailList,
                 subject,
                 summary
